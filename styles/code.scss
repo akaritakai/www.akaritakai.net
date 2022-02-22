@@ -1,0 +1,19 @@
+@import '~prismjs/themes/prism-okaidia.css';
+@import './colors.scss';
+
+// Make code-block background color a function of our theme's background color.
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: lighten($color-background, 5%);
+}
+
+// Inline code
+:not(pre[class*="language-"]) > code:not([class]) {
+  color: $color-secondary;
+  &:before {
+    content: '`';
+  }
+  &:after {
+    content: '`';
+  }
+}

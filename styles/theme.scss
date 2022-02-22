@@ -1,0 +1,152 @@
+@import './colors.scss';
+
+/*
+ * This CSS theme is designed to emulate some of the very nice styling on https://christine.website/
+ * While some if it is changed, it is largely derived from the CSS for the site itself
+ * The original code can be viewed here: https://github.com/Xe/site/blob/e4786467dfc7ec770d4b18e46ee52d2d71f11ba9/css/hack.css
+ * Adaptation supported per the zlib license https://github.com/Xe/site/blob/e4786467dfc7ec770d4b18e46ee52d2d71f11ba9/LICENSE
+ */
+
+body {
+  font-size: 1rem;
+  font-family: monospace;
+  background-color: $color-background;
+  color: white;
+}
+
+/*
+ * Headers
+ *
+ * Presents headers in the following ways using our theme color for headers:
+ * h1) `Text Goes Here`
+ *     `==============`
+ * h2) `## Text Goes Here`
+ * h3) `### Text Goes Here`
+ * h4) `#### Text Goes Here`
+ * h5) `##### Text Goes Here`
+ * h6) `###### Text Goes Here`
+ */
+h1, h2, h3, h4, h5, h6 {
+  color: $color-primary;
+  font-size: 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  position: relative;
+}
+h1 {
+  overflow: hidden;
+  display: table-cell;
+  padding: 1.5rem 0 2rem;
+  &:after {
+    content: "===============================================================================================================================================================";
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+  }
+}
+h2, h3, h4, h5, h6 {
+  &:before {
+    display: inline;
+  }
+}
+h2:before {
+  content: "## ";
+}
+h3:before {
+  content: "### ";
+}
+h4:before {
+  content: "#### ";
+}
+h5:before {
+  content: "##### ";
+}
+h6:before {
+  content: "###### ";
+}
+
+/*
+ * Links
+ */
+a {
+  color: $color-link;
+  &:link {
+    color: $color-link;
+  }
+  &:visited {
+    color: $color-link-used;
+  }
+  &:hover {
+    color: $color-link-hover;
+  }
+  &:active {
+    color: $color-link-hover;
+  }
+}
+
+/*
+ * Lists
+ */
+ul {
+  padding-left: 0;
+  li {
+    padding-left: 1rem;
+    position: relative;
+    display: block;
+    &:before {
+      content: '- ';
+    }
+  }
+}
+ol {
+  counter-reset: a;
+  padding-left: 0;
+  li {
+    padding-left: 1rem;
+    position: relative;
+    display: block;
+    &:before {
+      content: counter(a) '. ';
+      counter-increment: a;
+    }
+  }
+}
+
+/*
+ * Blockquotes
+ * Prefixes text in a blockquote with '> ' and nested blockquotes with '>'
+ */
+@mixin blockquote-prefix($element, $count) {
+  #{$element} {
+    margin: 0;
+    overflow: hidden;
+    padding-left: #{$count}ch;
+    position: relative;
+    &:after {
+      content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+      left: 0;
+      position: absolute;
+      top: 0;
+      white-space: pre;
+    }
+  }
+}
+blockquote {
+  margin: 1rem 0;
+  @include blockquote-prefix(p, 2); // Text will be prefixed with '> ' which is 2 characters
+  @include blockquote-prefix(blockquote, 1); // A nested blockquote will be prefixed with '>' which is 1 character
+}
+
+/*
+ * Horizontal Rule
+ */
+hr {
+  border: 0;
+  height: 1rem;
+
+  &:after {
+    content: "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+  }
+}
+
+@import './code.scss'; // Provides theming for codeblocks

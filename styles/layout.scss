@@ -1,0 +1,67 @@
+@import './sizes.scss';
+
+/*
+ * Styling for pages inspired by https://christine.website/
+ * Adaptation of the styling in https://github.com/Xe/site/tree/e4786467dfc7ec770d4b18e46ee52d2d71f11ba9
+ * as supported by the zlib license https://github.com/Xe/site/blob/e4786467dfc7ec770d4b18e46ee52d2d71f11ba9/LICENSE
+ */
+
+/**
+ * Page container layout
+ * Lines up header -> content -> footer and restricts width
+ */
+#container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: $max-page-width;
+  padding: 1rem;
+}
+
+/**
+ * Home page content layout
+ */
+$home-breakpoint: 800px;
+#home-container {
+  // Contains the main content of the page in two-columns which collapse into a single column at the breakpoint
+  display: flex;
+  gap: 2rem;
+  @media (max-width: $home-breakpoint) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  padding-top: 1rem;
+}
+#home-left {
+  // Contains the image content column
+  // This column is at least `max-page-width * 0.25` width and does not shrink
+  flex-grow: 1;
+  img {
+    max-width: calc(#{$max-page-width} * 0.25);
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px; // Aligns the image with the top of the text in the content column a little better
+}
+#home-right {
+  // Contains the text content column
+  // This column starts at `max-page-width * 0.75` and shrinks until the breakpoint
+  flex-grow: 3;
+}
+
+/**
+ * Contact page layout
+ */
+$contact-breakpoint: 450px;
+#contact-container {
+  display: flex;
+  gap: 2rem;
+  @media (max-width: $contact-breakpoint) {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.contact-column {
+  width: 50%;
+}

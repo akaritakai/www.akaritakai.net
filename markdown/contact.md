@@ -1,5 +1,5 @@
 ---
-title: Contact | Justin's website
+title: Contact | Justin's Website
 description: Contact info for Justin
 path: /contact/
 ---

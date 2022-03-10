@@ -66,7 +66,7 @@ function generateRss(callback) {
     const feed = new RSS({
         title: "Justin's Blog",
         description: "Blog posts by Justin",
-        feed_url: 'https://akaritakai.net/rss.xml',
+        feed_url: 'https://akaritakai.net/feed.rss',
         site_url: 'https://akaritakai.net/blog/',
         pubDate: now,
         language: 'en-US',

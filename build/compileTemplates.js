@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import FaviconsWebpackPlugin from "favicons-webpack-plugin";
 import fs from "fs";
 import glob from 'glob';
 import gulp from 'gulp';
@@ -6,7 +7,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "path";
 import webpack from "webpack";
 
-import {createDirectory, emptyJsPath, removePath, templateCompileDir, templateRenderDir} from "./paths.js";
+import {createDirectory, emptyJsPath, faviconDir, removePath, templateCompileDir, templateRenderDir} from "./paths.js";
 import renderTemplates from "./renderTemplates.js";
 
 function compileTemplates(callback) {
@@ -45,6 +46,30 @@ function compileTemplates(callback) {
                         sortAttributes: true,
                         sortClassName: true,
                         useShortDoctype: true
+                    }
+                }),
+                new FaviconsWebpackPlugin({
+                    logo: path.join(faviconDir, 'favicon.png'),
+                    prefix: '',
+                    favicons: {
+                        appName: null,
+                        appShortName: null,
+                        appDescription: null,
+                        developerName: null,
+                        developerURL: null,
+                        lang: "en-US",
+                        logging: false,
+                        pixel_art: false,
+                        icons: {
+                            android: false,
+                            appleIcon: false,
+                            appleStartup: false,
+                            coast: false,
+                            favicons: true,
+                            firefox: false,
+                            windows: false,
+                            yandex: false
+                        }
                     }
                 })
             ]

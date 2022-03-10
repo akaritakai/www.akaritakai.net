@@ -6,4 +6,4 @@ path: /blog/
 
 # Blog Posts
 
-If you have a compatible reader, be sure to check out my [RSS Feed](/rss.xml) for automatic updates.
+If you have a compatible reader, be sure to check out my [RSS Feed](/feed.rss) for automatic updates.

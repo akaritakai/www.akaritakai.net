@@ -83,7 +83,7 @@ function generateRss(callback) {
             });
         }
     });
-    fs.writeFileSync(path.join(mapsCompileDir, 'rss.xml'), feed.xml());
+    fs.writeFileSync(path.join(mapsCompileDir, 'feed.rss'), feed.xml());
     callback();
 }
 

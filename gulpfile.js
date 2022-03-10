@@ -10,7 +10,7 @@ import {
   distDir, mapsCompileDir,
   outputDir,
   recursiveCopy,
-  removePath, scriptCompileDir,
+  removePath, scriptCompileDir, staticDir,
   styleCompileDir,
   templateCompileDir
 } from "./build/paths.js";
@@ -27,6 +27,7 @@ export default gulp.series(
         recursiveCopy(styleCompileDir, distDir),
         recursiveCopy(templateCompileDir, distDir),
         recursiveCopy(assetsDir, path.join(distDir, 'assets')),
+        recursiveCopy(staticDir, distDir),
         recursiveCopy(mapsCompileDir, distDir)
     )
 );

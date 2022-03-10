@@ -15,6 +15,7 @@ export const styleDir = path.resolve(__dirname, 'styles');
 export const scriptDir = path.resolve(__dirname, 'scripts');
 export const markdownDir = path.resolve(__dirname, 'markdown');
 export const assetsDir = path.resolve(__dirname, 'assets');
+export const staticDir = path.resolve(__dirname, 'static');
 
 // Directory output paths
 export const outputDir = path.resolve(__dirname, 'output');

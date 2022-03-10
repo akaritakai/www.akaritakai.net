@@ -8,4 +8,4 @@ path: /feeds/
 
 ## Blog Feeds
 
-- [RSS](/rss.xml)
+- [RSS](/feed.rss)

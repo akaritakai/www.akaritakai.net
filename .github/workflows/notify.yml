@@ -1,0 +1,16 @@
+name: 'Send deploy notification'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send deploy notification
+        env:
+          PARENT_REPO: akaritakai/terraform
+          PARENT_BRANCH: main
+          WORKFLOW_ID: 21513623
+        run: |
+          curl -fL --retry 3 -X POST -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ${{ secrets.GH_AUTH_TOKEN }}" https://api.github.com/repos/akaritakai/terraform/actions/workflows/21513623/dispatches -d '{"ref":"main"}'

@@ -33,7 +33,7 @@ The surprising answer to all-of-the-above is "yes." If you'd like to see the log
 there, you can watch the video below:
 
 <div class="centered-column">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yKf9aUIxdb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yKf9aUIxdb4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 When I watched the video, I was mesmerized. It was such a beautiful puzzle and required such a spectacular display of

@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /static/
 Disallow: /tmp/
 Sitemap: https://akaritakai.net/sitemap.xml

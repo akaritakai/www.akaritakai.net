@@ -17,9 +17,7 @@ tags:
 You are given a sudoku puzzle with these given digits
 
 <div class="centered-column">
-
-![The unsolved sudoku grid](/assets/img/sudoku-1.webp)
-
+<img alt="The unsolved sudoku grid" src="/assets/img/sudoku-1.webp" width="450">
 </div>
 
 and the following constraints:

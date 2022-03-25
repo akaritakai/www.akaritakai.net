@@ -1,8 +1,10 @@
 // Provides an easy-to-use centered column layout for markdown pages
 .centered-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   img {
     max-width: 100%;
   }

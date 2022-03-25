@@ -1,6 +1,6 @@
 ---
 title: Can I just please have internet?
-date: 2022-03-21T00:00:00.000Z
+date: 2022-03-24T00:00:00.000Z
 description: The story of how it took way too long to get an internet connection at my new place
 blog: true
 path: /blog/please-give-me-internet/

@@ -17,7 +17,9 @@ tags:
 This is the story of how I ended up desperate enough to be using Twitter to try to get help with getting an internet
 connection at my new place.
 
+<div class="centered-column">
 <blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr"><a href="https://twitter.com/ATTHelp?ref_src=twsrc%5Etfw">@ATTHelp</a> Today is the 6th day I&#39;ve been without internet after 2 no-shows from technicians. I just need to be sent a registered ONT. Can you just mail one to me, please?</p>&mdash; Justin Kaufman (@akaritakai) <a href="https://twitter.com/akaritakai/status/1504540181508067329?ref_src=twsrc%5Etfw">March 17, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 
 But first, a disclaimer:
 

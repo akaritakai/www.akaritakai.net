@@ -17,9 +17,7 @@ tags:
 This is the story of how I ended up desperate enough to be using Twitter to try to get help with getting an internet
 connection at my new place.
 
-<div class="centered-column">
-<img alt="The tweet in question" src="/assets/img/att-internet-1.webp" width="550">
-</div>
+<blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="en" dir="ltr"><a href="https://twitter.com/ATTHelp?ref_src=twsrc%5Etfw">@ATTHelp</a> Today is the 6th day I&#39;ve been without internet after 2 no-shows from technicians. I just need to be sent a registered ONT. Can you just mail one to me, please?</p>&mdash; Justin Kaufman (@akaritakai) <a href="https://twitter.com/akaritakai/status/1504540181508067329?ref_src=twsrc%5Etfw">March 17, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 But first, a disclaimer:
 
@@ -46,7 +44,7 @@ If the difference was 1ms on fiber vs. 10ms on cable for a given connection, and
 of requests like this:
 
 <div class="centered-column">
-<img alt="A waterfall plot for a website" src="/assets/img/att-internet-2.webp" width="500">
+<img alt="A waterfall plot for a website" src="/assets/img/att-internet-1.webp" width="500">
 </div>
 
 Then, for the four layers shown, our request would only take 4ms on fiber but would take 40ms on cable. That doesn't
@@ -58,7 +56,7 @@ more than 1 Gbps download speed, but only 35 Mbps upload! And when you find your
 file, the difference is enormous:
 
 <div class="centered-column">
-<img alt="A graph displaying the difference between cable and fiber upload speeds" src="/assets/img/att-internet-3.webp" width="600">
+<img alt="A graph displaying the difference between cable and fiber upload speeds" src="/assets/img/att-internet-2.webp" width="600">
 </div>
 
 So now that I had settled on finding a new place with at least a 1 Gbps symmetric fiber connection. How was I going to
@@ -96,7 +94,7 @@ Boy was that wrong.
 Let's cover really quick what is actually required to get AT&T Fiber Internet:
 
 <div class="centered-column">
-<img alt="A graph displaying the typical setup for AT&T Fiber" src="/assets/img/att-internet-4.webp" width="950">
+<img alt="A graph displaying the typical setup for AT&T Fiber" src="/assets/img/att-internet-3.webp" width="950">
 </div>
 
 A fiber line comes through the wall, gets converted from a fiber connection to ethernet through an ONT provided by AT&T,
@@ -111,7 +109,7 @@ authenticate and receive internet access to the network, so only AT&T's RG will 
 That's what I should have had. What I actually had looked like this:
 
 <div class="centered-column">
-<img alt="A graph displaying what my place came with for Internet hook-ups" src="/assets/img/att-internet-5.webp" width="950">
+<img alt="A graph displaying what my place came with for Internet hook-ups" src="/assets/img/att-internet-4.webp" width="950">
 </div>
 
 Well, crap. I would have to have a technician come out and provide me with an ONT (or somehow talk AT&T into
@@ -138,7 +136,7 @@ get my assigned IPv4 address and my IPv6 block.
 The way the RG authenticates to AT&T's network looks something like this:
 
 <div class="centered-column">
-<img alt="A diagram of the RG's authentication to the ONT" src="/assets/img/att-internet-6.webp" width="450">
+<img alt="A diagram of the RG's authentication to the ONT" src="/assets/img/att-internet-5.webp" width="450">
 </div>
 
 So, unfortunately, you need the RG to authenticate to the ONT via 802.1X using the certificates present on the RG. One
@@ -154,7 +152,7 @@ pandemic, I routinely ran out of NAT sessions in large Zoom meetings.
 So is there any way to get the more "pure" setup? Absolutely. My own setup looks like this:
 
 <div class="centered-column">
-<img alt="A diagram of my bypass" src="/assets/img/att-internet-7.webp" width="600">
+<img alt="A diagram of my bypass" src="/assets/img/att-internet-6.webp" width="600">
 </div>
 
 I use [this project](https://github.com/MonkWho/pfatt) to forward just the 802.1X traffic to the RG and let it
@@ -182,7 +180,7 @@ step is figuring out how AT&T's network works. We can do some
 some reasonable guesses as to the internals.
 
 <div class="centered-column">
-<img alt="A diagram of how the ONT and RG communicate with AT&T's network" src="/assets/img/att-internet-8.webp" width="600">
+<img alt="A diagram of how the ONT and RG communicate with AT&T's network" src="/assets/img/att-internet-7.webp" width="600">
 </div>
 
 More research is needed here clearly but is challenging  to do given the restricted access to hardware and the
@@ -196,8 +194,8 @@ Anyway, a few days pass, and the technician is a no-show. I call AT&T, and they 
 I purchased a fiber cable and took the ONT out of my old place to test if the fiber link was working.
 
 <div class="centered-column">
-<img alt="A picture of me removing an ONT from my old place" src="/assets/img/att-internet-9.webp" width="500">
-<img alt="A picture of me using an ONT to test my network connection" src="/assets/img/att-internet-10.webp" width="500">
+<img alt="A picture of me removing an ONT from my old place" src="/assets/img/att-internet-8.webp" width="500">
+<img alt="A picture of me using an ONT to test my network connection" src="/assets/img/att-internet-9.webp" width="500">
 </div>
 
 The lights confimed that the fiber link was working, so I put the ONT back where it belonged. Hopefully, it didn't cause
@@ -216,7 +214,7 @@ point, I've been without internet for 6 days, and I am beyond annoyed. All I nee
 a tech to register it. Hell, if they pre-register it back at the office and mail it to me, then _I_ could plug it in.
 
 <div class="centered-column">
-<img alt="A picture indicating where the ONT should be plugged in" src="/assets/img/att-internet-11.webp" width="500">
+<img alt="A picture indicating where the ONT should be plugged in" src="/assets/img/att-internet-10.webp" width="500">
 </div>
 
 So, I called up again, and surprise, surprise, the work order was there, but it didn't get added to the technician's

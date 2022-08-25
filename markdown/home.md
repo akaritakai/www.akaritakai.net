@@ -15,7 +15,7 @@ path: /
 I'm Justin and welcome to my website. ^_^
 
 This started out as a combination of two personal projects: building a statically generated blog from markdown files
-(inspired by [this blog post](https://christine.website/blog/new-language-blog-backend-2022-03-02)), and then deploying
+(inspired by [this blog post](https://xeiaso.net/blog/new-language-blog-backend-2022-03-02)), and then deploying
 it with a CI/CD pipeline on commit. While the underlying tech is really what interests me, I plan on expanding this site
 soon to include more content, blog posts, and features.
 

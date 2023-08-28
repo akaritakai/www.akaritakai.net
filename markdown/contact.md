@@ -11,7 +11,7 @@ path: /contact/
 
 ## Email
 
-justin@jkaufman.me
+akaritakai@gmail.com
 
 ## Social Media
 

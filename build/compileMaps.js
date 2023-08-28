@@ -64,8 +64,8 @@ function generateSitemap(callback) {
 function generateRss(callback) {
     // Format a date like 'May 20, 2012 04:00:00 GMT' for 'now'
     const feed = new RSS({
-        title: "Justin's Blog",
-        description: "Blog posts by Justin",
+        title: "Olivia's Blog",
+        description: "Blog posts by Olivia",
         feed_url: 'https://akaritakai.net/feed.rss',
         site_url: 'https://akaritakai.net/blog/',
         pubDate: now,

@@ -1,6 +1,6 @@
 ---
-title: Feeds | Justin's Website
-description: A list of feeds for Justin's blog
+title: Feeds | Olivia's Website
+description: A list of feeds for Olivia's blog
 path: /feeds/
 ---
 

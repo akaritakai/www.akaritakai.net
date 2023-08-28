@@ -1,6 +1,6 @@
 ---
-title: Justin's Blog
-description: A list of Justin's blog posts
+title: Olivia's Blog
+description: A list of Olivia's blog posts
 path: /blog/
 ---
 

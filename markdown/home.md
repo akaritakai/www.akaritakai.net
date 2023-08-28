@@ -1,6 +1,6 @@
 ---
-title: Justin's Website
-description: Justin's website
+title: Olivia's Website
+description: Olivia's website
 path: /
 ---
 
@@ -12,7 +12,7 @@ path: /
 
 ## Hello!
 
-I'm Justin and welcome to my website. ^_^
+I'm Olivia and welcome to my website. ^_^
 
 This started out as a combination of two personal projects: building a statically generated blog from markdown files
 (inspired by [this blog post](https://xeiaso.net/blog/new-language-blog-backend-2022-03-02)), and then deploying

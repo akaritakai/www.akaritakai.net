@@ -27,7 +27,7 @@ akaritakai@gmail.com
 
 ### Discord
 
-`AkariTakai#3490`
+`akaritakai`
 
 ### Telegram
 

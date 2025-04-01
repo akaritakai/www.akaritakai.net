@@ -16,7 +16,7 @@ akaritakai@gmail.com
 ## Social Media
 
 - [GitHub](https://github.com/akaritakai)
-- [BlueSky](https://bsky.app/profile/akaritakai.net)
+- [BlueSky](https://bsky.app/profile/olivia.wtf)
 - [Keybase](https://keybase.io/akaritakai)
 - [LinkedIn](https://www.linkedin.com/in/akaritakai/)
 

@@ -2,7 +2,7 @@ name: Version, Build, and Release
 on:
   workflow_dispatch: {}
 permissions:
-  content: write
+  contents: write
 jobs:
   version-build-and-release:
     runs-on: ubuntu-latest

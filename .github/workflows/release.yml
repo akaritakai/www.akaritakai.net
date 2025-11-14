@@ -1,0 +1,56 @@
+name: Version, Build, and Release
+on:
+  workflow_dispatch: {}
+permissions:
+  content: write
+jobs:
+  version-build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "yarn"
+      - name: Install global tools
+        run: npm install --global gulp-cli
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Bump patch version in package.json
+        run: |
+          # Bump patch version without auto-tagging
+          npm version patch --no-git-tag-version
+
+          VERSION=$(node -p "require('./package.json').version")
+          echo "VERSION=$VERSION"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+      - name: Commit bumped version and create tag
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add package.json yarn.lock || true
+          git commit -m "chore: bump version to $VERSION" || echo "No changes to commit"
+
+          git tag "$VERSION" || echo "Tag $VERSION already exists"
+
+          git push origin HEAD --follow-tags
+        env:
+          VERSION: ${{ env.VERSION }}
+      - name: Build site
+        run: yarn build
+      - name: Create tarball from output
+        run: |
+          mkdir -p artifacts
+          tar czf "artifacts/www.akaritakai.net-${VERSION}.tar.gz" -C output/dist .
+      - name: Create GitHub release and upload asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "${{ env.VERSION }}"
+          name: "Release ${{ env.VERSION }}"
+          files: artifacts/www.akaritakai.net-${{ env.VERSION }}.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
+
